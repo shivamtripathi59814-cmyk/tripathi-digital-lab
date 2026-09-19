@@ -1,12 +1,238 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Tripathi Digital Lab</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tripathi Digital Lab</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#050507;
+    color:white;
+    overflow-x:hidden;
+}
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+
+.video-bg{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-3;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(90deg,
+        rgba(0,0,0,.85),
+        rgba(5,0,20,.45),
+        rgba(0,0,0,.8));
+    z-index:-2;
+}
+
+.glow{
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:rgba(100,0,255,.18);
+    filter:blur(100px);
+    z-index:-1;
+}
+
+.nav{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    padding:25px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:5;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.nav span{
+    margin-left:25px;
+    font-size:13px;
+    color:#ccc;
+}
+
+.content{
+    width:90%;
+    max-width:1000px;
+    text-align:center;
+}
+
+.tag{
+    color:#a98cff;
+    letter-spacing:5px;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:clamp(48px,9vw,110px);
+    line-height:.95;
+    letter-spacing:-4px;
+    margin-bottom:25px;
+}
+
+h1 span{
+    background:linear-gradient(90deg,#fff,#9d7cff,#6ccaff);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.subtitle{
+    max-width:700px;
+    margin:auto;
+    color:#d0d0d0;
+    font-size:18px;
+    line-height:1.7;
+}
+
+.buttons{
+    margin-top:35px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 28px;
+    margin:7px;
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:50px;
+    color:white;
+    text-decoration:none;
+    background:rgba(255,255,255,.07);
+    backdrop-filter:blur(10px);
+}
+
+.btn.primary{
+    background:white;
+    color:#080808;
+}
+
+.services{
+    margin-top:45px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+}
+
+.services span{
+    padding:9px 15px;
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:30px;
+    color:#bbb;
+    background:rgba(255,255,255,.04);
+}
+
+@media(max-width:600px){
+
+    .nav span{
+        display:none;
+    }
+
+    .logo{
+        font-size:16px;
+    }
+
+    h1{
+        letter-spacing:-2px;
+    }
+
+    .subtitle{
+        font-size:15px;
+    }
+
+    .video-bg{
+        object-position:center;
+    }
+}
+</style>
 </head>
+
 <body>
 
-<h1>SHUBHAM TRIPATHI</h1>
-<p>AI • Web • Automation • Design • Digital Products</p>
+<section class="hero">
+
+<video class="video-bg" autoplay muted loop playsinline>
+    <source src="cinematic.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+<div class="glow"></div>
+
+<nav class="nav">
+    <div class="logo">TRIPATHI DIGITAL LAB</div>
+
+    <div>
+        <span>WORK</span>
+        <span>SERVICES</span>
+        <span>CONTACT</span>
+    </div>
+</nav>
+
+<div class="content">
+
+    <div class="tag">AI • WEB • AUTOMATION • DESIGN</div>
+
+    <h1>
+        SHUBHAM<br>
+        <span>TRIPATHI</span>
+    </h1>
+
+    <p class="subtitle">
+        Building premium digital experiences with
+        AI, websites, automation, creative design
+        and digital products.
+    </p>
+
+    <div class="buttons">
+        <a href="#" class="btn primary">VIEW MY WORK</a>
+        <a href="#" class="btn">CONTACT ME</a>
+    </div>
+
+    <div class="services">
+        <span>AI Agents</span>
+        <span>AI Chatbots</span>
+        <span>AI Automation</span>
+        <span>Web Development</span>
+        <span>UI/UX</span>
+        <span>Logo Design</span>
+        <span>Digital Products</span>
+    </div>
+
+</div>
+
+</section>
 
 </body>
 </html>
